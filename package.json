@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/DARWIN-coder-G7/node-js/issues"
   },
-  "homepage": "https://github.com/DARWIN-coder-G7/node-js#readme"
+  "homepage": "https://github.com/DARWIN-coder-G7/node-js#readme",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^11.1.0"
+  }
 }
