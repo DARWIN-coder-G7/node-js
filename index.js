@@ -1,8 +1,10 @@
-console.log("testing");
-console.log("testing is nodemon working");
+const logEvents = require('./logEvents');
+const EventEmitter = require('events');
 
-const {format}= require('date-fns');
-const {v4: uuid}= require('uuid');
+class MyEmitter extends EventEmitter{}
 
-console.log(format(new Date(),'ddMMyyyy\tHH:mm:ss'));
-console.log(uuid());
+const myEmitter = new MyEmitter();
+
+myEmitter.on('log',(msg)=>{logEvents(msg)});
+
+myEmitter.emit('log','logEvent Got Emitted');
